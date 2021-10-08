@@ -1,0 +1,41 @@
+.footer {
+    margin-bottom: 150px;
+    &-header {
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 115px;
+    }
+    &-heading {
+        max-width: 620px;
+        line-height: 1.5;
+    }
+    &-bottom {
+        display: grid;
+        grid-template-columns: 3fr 1fr 1fr 1fr;
+        grid-gap: 0 100px;
+    }
+    &-desc {
+        max-width: 350px;
+        color: $text-color;
+        font-size: 16px;
+        line-height: 1.6;
+        margin-bottom: 50px;
+    }
+    &-icon {
+        color: inherit;
+        font-size: 30px;
+        display: flex;
+        gap: 0 40px;
+    }
+    &-title {
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 50px;
+    }
+    &-link {
+        display: block;
+        margin-bottom: 40px;
+        color: inherit;
+    }
+}

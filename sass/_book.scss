@@ -1,0 +1,71 @@
+.book {
+    padding: 180px 0 160px;
+    border-radius: 20px;
+    background-color: $light-blue;
+    margin-bottom: 175px;
+    &-container {
+        max-width: 960px;
+        margin: 0 auto;
+    }
+    &-heading {
+        text-align: center;
+        margin-bottom: 75px;
+    }
+    &-form {
+        background-color: white;
+        border-radius: 20px;
+        padding: 25px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 100px;
+        grid-gap: 25px;
+    }
+    &-button {
+        width: 100px;
+        height: 100px;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        ion-icon {
+            font-size: 32px;
+        }
+    }
+    &-destination {
+        background-color: $gray;
+        border-radius: inherit;
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 30px;
+        ion-icon {
+            font-size: 25px;
+            color: $primary;
+        }
+    }
+    &-input {
+        border: none;
+        background-color: transparent;
+        font-size: 16px;
+    }
+}
+.dropdown {
+    width: 100%;
+    height: 100%;
+    background-color: $gray;
+    border-radius: 20px;
+    position: relative;
+    &-list {
+        display: none;
+    }
+    &-select {
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        padding: 0 30px;
+        ion-icon {
+            font-size: 25px;
+            color: $primary;
+        }
+    }
+}
