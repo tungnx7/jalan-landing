@@ -32,6 +32,11 @@
     &-title {
         font-weight: bold;
         margin-bottom: 15px;
+        color: $text-color;
+        transition: all 0.2s linear;
+        &:hover {
+            color: $primary;
+        }
     }
     &-place {
         font-weight: 300;

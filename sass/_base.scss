@@ -1,5 +1,6 @@
 html {
     box-sizing: border-box;
+    scroll-behavior: smooth;
   }
   * {
     margin: 0;
@@ -80,9 +81,13 @@ html {
     font-weight: 600;
     letter-spacing: 0.5px;
     padding: 40px 30px;
+    transition: all 0.2s linear;
     &--primary {
       color: white;
       background-color: $primary;
+    }
+    &:hover {
+      background-color: blue;
     }
   }
   .layout {

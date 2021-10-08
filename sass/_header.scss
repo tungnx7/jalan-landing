@@ -72,6 +72,10 @@
   &-link {
     color: inherit;
     font-weight: 500;
+    transition: all 0.2s linear;
+    &:hover {
+      color: $primary;
+    }
   }
 }
 .search {
