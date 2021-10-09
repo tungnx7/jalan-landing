@@ -1,71 +1,160 @@
 .offer {
-    margin-bottom: 240px;
-    &-header {
-        display:flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 115px;
+  margin-bottom: 240px;
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 115px;
+  }
+  &-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 0 80px;
+  }
+  &-image {
+    height: 560px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 60px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
-    &-list {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-gap: 0 80px;
+  }
+  &-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  &-title {
+    font-weight: 600;
+    line-height: 1.5;
+    margin-bottom: 45px;
+    color: $text-color;
+    transition: all 0.2s linear;
+    &:hover {
+      color: $primary;
+    }
+  }
+  &-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &-location {
+    display: flex;
+    align-items: center;
+    color: $text-color;
+    transition: all 0.2s linear;
+    ion-icon {
+      color: $gray-lighter;
+      margin-right: 5px;
+      font-size: 20px;
+    }
+    &:hover {
+      color: $secondary;
+      ion-icon {
+        color: $secondary;
+      }
+    }
+  }
+  &-rating {
+    display: flex;
+    align-items: center;
+    ion-icon {
+      margin-right: 5px;
+      font-size: 20px;
+    }
+  }
+}
+@media screen and (max-width: 1599px) {
+  .offer {
+    margin-bottom: 180px;
+    &-header {
+      margin-bottom: 70px;
     }
     &-image {
-        height: 560px;
-        border-radius: 20px;
-        overflow: hidden;
-        margin-bottom: 60px;
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-    }
-    &-top {
-        display:flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 20px;
+      height: 420px;
+      margin-bottom: 45px;
     }
     &-title {
-        font-weight: 600;
-        line-height: 1.5;
-        margin-bottom: 45px;
-        color: $text-color;
-        transition: all 0.2s linear;
-        &:hover {
-            color: $primary;
-        }
+      margin-bottom: 35px;
     }
-    &-bottom {
-        display:flex;
-        justify-content: space-between;
-        align-items: center;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .offer {
+    margin-bottom: 130px;
+    &-header {
+      margin-bottom: 50px;
     }
-    &-location {
-        display: flex;
-        align-items: center;
-        color: $text-color;
-        transition: all 0.2s linear;
-        ion-icon {
-            color: $gray-lighter;
-            margin-right: 5px;
-            font-size: 20px;
-        }
-        &:hover {
-            color: $secondary;
-            ion-icon {
-                color: $secondary;
-            }
-        }
+    &-list {
+      gap: 0 40px;
     }
-    &-rating {
-        display: flex;
-        align-items: center;
-        ion-icon {
-            margin-right: 5px;
-            font-size: 20px;
-        }
+    &-image {
+      height: 350px;
+      margin-bottom: 30px;
     }
+    &-title {
+      font-size: 16px;
+      margin-bottom: 25px;
+    }
+  }
+}
+@media screen and (max-width: 1023px) {
+  .offer {
+    margin-bottom: 100px;
+    &-header {
+      margin-bottom: 35px;
+    }
+    &-list {
+      gap: 0 25px;
+    }
+    &-image {
+      height: 300px;
+      margin-bottom: 25px;
+    }
+    &-title {
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  .offer {
+    margin-bottom: 70px;
+    &-header {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+    }
+    &-heading {
+      margin-bottom: 20px;
+    }
+    &-list {
+      display: grid;
+      justify-content: flex-start;
+      grid-auto-columns: 90%;
+      grid-auto-flow: column;
+      grid-gap: 1.5rem;
+      overflow: auto;
+      overflow-y: hidden;
+      scroll-snap-type: x mandatory;
+      scroll-snap-stop: always;
+      -ms-touch-action: manipulation;
+      touch-action: manipulation;
+      -webkit-overflow-scrolling: touch;
+      scroll-padding: 1rem;
+      grid-template-columns: unset;
+    }
+    &-list::-webkit-scrollbar {
+      display: none;
+      width: 0;
+    }
+    &-list > * {
+      scroll-snap-align: start;
+    }
+  }
 }

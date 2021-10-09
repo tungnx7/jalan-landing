@@ -1,71 +1,144 @@
 .book {
-    padding: 180px 0 160px;
+  padding: 180px 0 160px;
+  border-radius: 20px;
+  background-color: $light-blue;
+  margin-bottom: 175px;
+  &-container {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  &-heading {
+    text-align: center;
+    margin-bottom: 75px;
+  }
+  &-form {
+    background-color: white;
     border-radius: 20px;
-    background-color: $light-blue;
-    margin-bottom: 175px;
-    &-container {
-        max-width: 960px;
-        margin: 0 auto;
+    padding: 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 100px;
+    grid-gap: 25px;
+  }
+  &-button {
+    width: 100px;
+    height: 100px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    ion-icon {
+      font-size: 32px;
     }
-    &-heading {
-        text-align: center;
-        margin-bottom: 75px;
+  }
+  &-destination {
+    background-color: $gray;
+    border-radius: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    ion-icon {
+      font-size: 25px;
+      color: $primary;
     }
-    &-form {
-        background-color: white;
-        border-radius: 20px;
-        padding: 25px;
-        display: grid;
-        grid-template-columns: 1fr 1fr 100px;
-        grid-gap: 25px;
-    }
-    &-button {
-        width: 100px;
-        height: 100px;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        ion-icon {
-            font-size: 32px;
-        }
-    }
-    &-destination {
-        background-color: $gray;
-        border-radius: inherit;
-        display:flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 30px;
-        ion-icon {
-            font-size: 25px;
-            color: $primary;
-        }
-    }
-    &-input {
-        border: none;
-        background-color: transparent;
-        font-size: 16px;
-    }
+  }
+  &-input {
+    border: none;
+    background-color: transparent;
+    font-size: 16px;
+  }
 }
 .dropdown {
-    width: 100%;
+  width: 100%;
+  height: 100%;
+  background-color: $gray;
+  border-radius: 20px;
+  position: relative;
+  &-list {
+    display: none;
+  }
+  &-select {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     height: 100%;
-    background-color: $gray;
-    border-radius: 20px;
-    position: relative;
-    &-list {
-        display: none;
+    padding: 0 30px;
+    ion-icon {
+      font-size: 25px;
+      color: $primary;
     }
-    &-select {
-        display:flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 100%;
-        padding: 0 30px;
-        ion-icon {
-            font-size: 25px;
-            color: $primary;
-        }
+  }
+}
+@media screen and (max-width: 1599px) {
+  .book {
+    padding: 140px 0 125px;
+    &-form {
+      padding: 20px;
     }
+    &-button {
+      width: 75px;
+      height: 75px;
+      ion-icon {
+        font-size: 28px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1279px) {
+  .book {
+    padding: 120px 0 100px;
+    margin-bottom: 120px;
+    &-form {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    &-button {
+      width: 60px;
+      height: 60px;
+      ion-icon {
+        font-size: 22px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1023px) {
+  .book {
+    padding: 100px 0 75px;
+    margin-bottom: 80px;
+    &-heading {
+      margin-bottom: 60px;
+    }
+    &-form {
+      max-width: 600px;
+      padding: 15px;
+    }
+    &-destination {
+      padding: 0 10px;
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  .book {
+    padding: 50px 0 50px;
+    &-heading {
+      margin-bottom: 40px;
+      font-size: 26px;
+    }
+    &-form {
+      padding: 20px 10px 20px;
+      max-width: 320px;
+      display: flex;
+      flex-direction: column;
+    }
+    &-button {
+      width: 100%;
+      font-size: 3rem;
+    }
+    &-destination {
+      padding: 15px 10px;
+    }
+  }
+  .dropdown-select {
+    padding: 15px 10px;
+  }
 }
